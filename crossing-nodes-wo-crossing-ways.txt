@@ -1,0 +1,10 @@
+//Includes crossing nodes attached directly to sidewalks
+[out:json][timeout:25];
+{{geocodeArea:new york city}}->.searchArea;
+node(area.searchArea)["highway"="crossing"]->.crossNodes;//all crossing nodes
+way(bn.crossNodes)->.parentWays;//find parent ways of crossing nodes
+way.parentWays["footway"="crossing"]->.crossWays;//filter parent ways to only crossing ways
+(.crossWays;>;)->.crossWayN;//find member nodes of crossing ways
+(.crossNodes; - .crossWayN;)->.crossNodes;//remove crossing way nodes from set of crossing nodes
+.crossNodes out geom;
+

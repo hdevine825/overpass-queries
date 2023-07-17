@@ -1,0 +1,17 @@
+[out:json][timeout:600];
+{{geocodeArea:new york city}}->.searchArea;
+way(area.searchArea)[highway]["highway"!="footway"]["highway"!="pedestrian"]["highway"!="steps"][surface=cobblestone]->.cobblestone;
+way(area.searchArea)[highway]["highway"!="footway"]["highway"!="pedestrian"]["highway"!="steps"][surface=sett]->.sett;
+way(area.searchArea)[highway]["highway"!="footway"]["highway"!="pedestrian"]["highway"!="steps"][surface=paving_stones]->.pavingStones;
+way(area.searchArea)[highway]["highway"!="footway"]["highway"!="pedestrian"]["highway"!="steps"][surface=unhewn_cobblestone]->.unhewn;
+.cobblestone out geom;
+.sett out geom;
+.pavingStones out geom;
+.unhewn out geom;
+
+{{style:
+way[surface=sett]{color:green;fill-color:green}
+way[surface=paving_stones]{color:blue;fill-color:blue}
+way[surface=cobblestone]{color:purple;fill-color:purple}
+way[surface=unhewn_cobblestone]{color:brown;fill-color:brown}
+}}

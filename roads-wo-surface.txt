@@ -1,0 +1,3 @@
+[out:json][timeout:600];
+way({{bbox}})[highway]["highway"!="footway"]["highway"!="motorway"]["highway"!="motorway_link"][access!=private]["highway"!="service"]["highway"!="steps"][!area][!surface]->.surfaceless;
+.surfaceless out geom;

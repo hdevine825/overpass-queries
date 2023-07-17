@@ -1,0 +1,9 @@
+[out:json][timeout:25];
+way[footway=crossing]({{bbox}})->.AllCrossing; //create set of all crossing ways
+node[barrier=kerb]({{bbox}})->.kerbs; //create set of all kerb nodes
+way(bn.kerbs)->.KerbWays; //create set of ways attached to kerb nodes
+(.KerbWays;-way[footway=sidewalk]({{bbox}});)->.KerbCross; //remove sidewalk ways from ways attached to kerb. Makes set of only crossings with kerbs. Might be redundant
+(.AllCrossing; - .KerbCross;)->.Kerbless; //Removes crossings with kerbs from set of all crossings
+(.Kerbless;.Kerbless >;)->.Kerbless;
+.Kerbless out;
+

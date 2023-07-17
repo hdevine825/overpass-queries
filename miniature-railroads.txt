@@ -1,0 +1,9 @@
+{{geocodeArea:"United States"}}->.searchArea;
+way["railway"="miniature"](area.searchArea)->.miniature;
+
+.miniature out geom;
+
+{{style:
+way[gauge]{color:green;fill-color:green}
+way[!gauge]{color:red;fill-color:red}
+}}

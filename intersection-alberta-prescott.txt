@@ -1,0 +1,8 @@
+//need to run on smaller area
+area[name="United States"]->.searchArea;
+way[highway]["name"~"Prescot"](area.searchArea)->.WPrescot;
+way[highway]["name"~"Alberta"](area.searchArea)->.WAlberta;
+node(w.WPrescot)->.NPrescot;
+node(w.WAlberta)->.NAlberta;
+node.NPrescot.NAlberta->.intersection;
+.intersection out geom;
