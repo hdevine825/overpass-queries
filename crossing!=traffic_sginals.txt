@@ -1,0 +1,11 @@
+//crossing!=traffic_signals Near Traffic Signals
+//Returns crossings without crossing=traffic_signals near traffic signals.
+node[highway=traffic_signals]({{bbox}})->.signals;
+node[highway=crossing][crossing!=traffic_signals](around.signals:15)->.near;
+(
+  way[highway=cycleway]({{bbox}});
+  way[highway=service]({{bbox}});
+)->.excludeways;
+.excludeways > -> .excludenodes;
+(.near; - .excludenodes;);
+out meta;

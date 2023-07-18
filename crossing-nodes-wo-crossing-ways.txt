@@ -1,4 +1,5 @@
-//Includes crossing nodes attached directly to sidewalks
+//Crossing Nodes without Crossing Ways
+//Returns crossing nodes that are not attached to a crossing way. Also includes crossing nodes attached directly to sidewalks.
 [out:json][timeout:25];
 {{geocodeArea:new york city}}->.searchArea;
 node(area.searchArea)["highway"="crossing"]->.crossNodes;//all crossing nodes

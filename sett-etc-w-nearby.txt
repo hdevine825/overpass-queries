@@ -1,3 +1,5 @@
+//Sett and Similar Surfaces with Nearby Unspecified Surfaces
+//Finds all sett, cobblestone, unhewn_cobblestone, and paving_stones road sufaces. In addition finds all roads nearby them with no surface values.
 [out:json][timeout:600];
 {{geocodeArea:new york city}}->.searchArea;
 way(area.searchArea)[highway]["highway"!="footway"]["highway"!="pedestrian"]["highway"!="steps"]["access"!="private"]["access"!="no"]["bicycle"!="no"]->.targetWays;

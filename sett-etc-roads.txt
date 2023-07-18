@@ -1,3 +1,5 @@
+//Sett and Similar Surface Roads
+//Finds sett, cobblesotn, paving_stones, and unhewn_cobblestone surface values.
 [out:json][timeout:600];
 {{geocodeArea:new york city}}->.searchArea;
 way(area.searchArea)[highway]["highway"!="footway"]["highway"!="pedestrian"]["highway"!="steps"][surface=cobblestone]->.cobblestone;

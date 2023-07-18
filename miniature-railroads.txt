@@ -1,3 +1,5 @@
+//Miniature Railways
+//Returns all miniature railways in US, styled to indicate whether gauge is specified.
 {{geocodeArea:"United States"}}->.searchArea;
 way["railway"="miniature"](area.searchArea)->.miniature;
 

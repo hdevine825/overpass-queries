@@ -1,3 +1,5 @@
+//Crossings without Kerbs
+//Returns crossing ways that are not attached to a kerb node. Will not return crossings that have incomplete kerbs, such as only at one end.
 [out:json][timeout:25];
 way[footway=crossing]({{bbox}})->.AllCrossing; //create set of all crossing ways
 node[barrier=kerb]({{bbox}})->.kerbs; //create set of all kerb nodes

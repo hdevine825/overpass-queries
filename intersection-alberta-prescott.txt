@@ -1,3 +1,5 @@
+//Intersections of Alberta and Prescott
+//Query to resolve a long running inside joke about the intersection of paralell roads Alberta and Prescott in Portland, OR.
 //need to run on smaller area
 area[name="United States"]->.searchArea;
 way[highway]["name"~"Prescot"](area.searchArea)->.WPrescot;
