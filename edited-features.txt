@@ -1,0 +1,8 @@
+//Features Edited During a Time Window
+//Returns all features last edited by the specified user as of a chosen time with a start time as well. Good for seeing everything edited on a mapping excursion.
+[date:"2023-09-16T21:30:00Z"];//replace this date and time with the end (UTC) of your mapping session
+(
+  node(user:"hdevine825")(newer:"2023-09-16T14:30:00Z")({{bbox}});//replace with your username and the date time with the start (UTC) of your mapping session
+  way(user:"hdevine825")(newer:"2023-09-16T14:30:00Z")({{bbox}});//replace with your username and the date time with the start (UTC) of your mapping session
+);
+out geom;

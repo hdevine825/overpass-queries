@@ -10,6 +10,8 @@ Returns crossings without crossing=traffic_signals near traffic signals.
 Returns crossing nodes that are not attached to a crossing way. Also includes crossing nodes attached directly to sidewalks.
 ### [Crossings without Kerbs](crossings-wo-kerbs.txt)
 Returns crossing ways that are not attached to a kerb node. Will not return crossings that have incomplete kerbs, such as only at one end.
+### [Features Edited During a Time Window](edited-features.txt)
+Returns all features last edited by the specified user as of a chosen time with a start time as well. Good for seeing everything edited on a mapping excursion.
 ### [Intersections of Alberta and Prescott](intersection-alberta-prescott.txt)
 Query to resolve a long running inside joke about the intersection of paralell roads Alberta and Prescott in Portland, OR.
 ### [Miniature Railways](miniature-railroads.txt)

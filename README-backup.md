@@ -1,6 +1,6 @@
 # Overpass Queries
 
-A repo of my often used overpass queries.
+A collection of my overpass queries. Includes a python script to update this readme.
 
 ## Queries
 
